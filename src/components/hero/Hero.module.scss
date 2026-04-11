@@ -1,0 +1,171 @@
+.hero-container {
+    margin-top: 100px;
+    background-color: var(--bg);
+    padding-top: 40px;
+
+
+    >.wrapper {
+        padding: 20px;
+        max-width: 950px;
+        margin: 0 auto;
+
+        .underScore {
+            position: relative;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-left: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 30px;
+                background-color: var(--accent);
+                left: 0;
+            }
+        }
+
+        >h1 {
+            color: var(--surface2);
+            font-size: 50px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+
+            span {
+                color: var(--accent);
+            }
+        }
+
+        >h2 {
+            color: var(--text);
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        >p {
+            color: var(--muted);
+            font-size: 20px;
+
+            span {
+                color: var(--accent2);
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    right: -5px;
+                    top: 0;
+                    width: 3px;
+                    height: 100%;
+                    background-color: var(--accent2);
+                    animation: blink .5s ease-in-out alternate infinite;
+                }
+                
+            }
+            @keyframes blink {
+
+                0%{
+                    opacity: 1;
+                }
+                50%{
+                    opacity: 0;
+                }
+                
+                100%{
+                    opacity: 1;
+                }
+                
+            }
+        }
+
+        .specialization {
+            margin-top: 30px;
+
+            p {
+                color: var(--muted);
+                margin-bottom: 12px;
+            }
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+
+            button {
+                border: none;
+                border: 1px solid var(--border2);
+                border-radius: 4px;
+                padding: 8px 16px;
+                background-color: transparent;
+                color: var(--text);
+                font-family: var(--font-code);
+                letter-spacing: 1px;
+                cursor: pointer;
+
+                &:first-child {
+                    background-color: var(--accent);
+                    color: var(--bg);
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .small-overview {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 80px;
+
+            .wrapper {
+                display: flex;
+                gap: 25px;
+                color: var(--text);
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+
+                    span {
+                        letter-spacing: 1px;
+                        color: var(--accent);
+
+                        // font-family: var(--font-all);
+                        &:first-child {
+                            font-size: 25px;
+                            font-weight: 700;
+                        }
+
+                        &:last-child {
+                            text-transform: uppercase;
+                            color: var(--muted);
+                            font-family: var(--font-code);
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:600px) {
+    .hero-container {
+        >.wrapper {
+            .hero-buttons {
+                
+                button:last-child{
+                    margin-top: 20px;
+                }
+
+            }
+            .small-overview{
+                margin-top: 80px;
+                justify-content: center;
+            }
+        }
+    }
+}

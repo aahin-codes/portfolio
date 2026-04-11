@@ -1,0 +1,112 @@
+.footerContainer {
+    background-color: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 20px;
+
+    >.wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 950px;
+        margin: 0 auto;
+
+        .left,
+        .right {
+            padding: 0px 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+
+            width: 50%;
+            font-size: 14px;
+        }
+
+        .left {
+
+            p {
+                color: var(--muted);
+
+                &:first-child {
+                    color: var(--accent);
+
+                    span {
+                        color: var(--accent2)
+                    }
+                }
+
+                svg {
+                    vertical-align: middle;
+                    margin: 0px 5px;
+                }
+            }
+        }
+
+        .right {
+            button {
+                border: none;
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                padding: 4px 8px;
+                background-color: transparent;
+                color: var(--muted);
+                cursor: pointer;
+                font-family: var(--font-code);
+                font-size: 13px;
+
+                svg {
+                    margin-right: 5px;
+                    vertical-align: middle;
+                }
+            }
+
+            div {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:500px) {
+    .footerContainer {
+        padding: 20px 10px;
+
+        >.wrapper {
+
+
+
+            .left {
+                width: 100%;
+                font-size: 13px;
+
+                p:first-child {
+                    display: none;
+                }
+            }
+
+            .right {
+                display: none;
+            }
+
+
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:950px) {
+    .footerContainer {
+        >.wrapper {
+            justify-content: center;
+
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+}
