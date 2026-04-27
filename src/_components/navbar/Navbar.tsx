@@ -32,12 +32,11 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 
       const observer = new IntersectionObserver(
         ([entry]) => {
-          // When at least 40% of the section is visible, mark it active
           if (entry.isIntersecting) {
             setActiveLink(key);
           }
         },
-        { threshold: 0.4 }
+        { threshold: 0.5 }
       );
 
       observer.observe(el);

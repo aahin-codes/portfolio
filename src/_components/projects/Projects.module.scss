@@ -1,7 +1,9 @@
 .projectContainer {
-    padding-top: 100px;
+    // padding-top: 100px;
+    min-height: 100dvh;
     background-color: var(--bg);
     --project-number: 01;
+    
 
 
 
@@ -59,6 +61,7 @@
 
         .projectCards {
             margin-top: 50px;
+            
 
 
             >.wrapper {
@@ -66,6 +69,7 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 50px;
                 overflow: hidden;
+                padding: 30px;
 
 
                 .projectCard:first-child {
