@@ -1,12 +1,12 @@
 'use client'
-import { Navbar } from "@/components/navbar/Navbar";
-import Hero from "@/components/hero/Hero";
-import About from "@/components/about/About";
-import Skills from "@/components/skills/Skills";
-import Projects from "@/components/projects/Projects";
-import Contact from "@/components/contact/Contact";
+import { Navbar } from "@/_components/navbar/Navbar";
+import Hero from "@/_components/hero/Hero";
+import About from "@/_components/about/About";
+import Skills from "@/_components/skills/Skills";
+import Projects from "@/_components/projects/Projects";
+import Contact from "@/_components/contact/Contact";
 import { useMemo, useRef } from "react";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/_components/footer/Footer";
 
 export default function Home() {
 

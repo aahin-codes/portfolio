@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/navbar/Navbar.module.scss';
+import Styles from '@/_components/navbar/Navbar.module.scss';
 import { useEffect, useState, forwardRef, RefObject } from 'react';
 
 

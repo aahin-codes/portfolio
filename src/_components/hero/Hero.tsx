@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/hero/Hero.module.scss';
+import Styles from '@/_components/hero/Hero.module.scss';
 import { forwardRef, RefObject, useEffect, useState } from 'react';
 
 const typewritingText = ['React Experiences',

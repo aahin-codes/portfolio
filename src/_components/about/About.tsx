@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/about/About.module.scss';
+import Styles from '@/_components/about/About.module.scss';
 import { forwardRef } from 'react';
 
 const skills = ['React','TypeScript','Node.js','Next.js','MongoDB'] as const;

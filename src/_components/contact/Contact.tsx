@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/contact/Contact.module.scss'
+import Styles from '@/_components/contact/Contact.module.scss'
 import Link from 'next/link';
 import { forwardRef, useState } from 'react';
 import { IoIosMail } from "react-icons/io";

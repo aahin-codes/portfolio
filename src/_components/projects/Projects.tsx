@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/projects/Projects.module.scss';
+import Styles from '@/_components/projects/Projects.module.scss';
 import { Span } from 'next/dist/trace';
 import Link from 'next/link';
 import { forwardRef } from 'react';

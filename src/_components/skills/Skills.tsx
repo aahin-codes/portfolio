@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/skills/Skills.module.scss';
+import Styles from '@/_components/skills/Skills.module.scss';
 import { forwardRef } from 'react';
 
 type Skill = {

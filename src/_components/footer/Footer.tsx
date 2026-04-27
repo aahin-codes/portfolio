@@ -1,5 +1,5 @@
 'use client'
-import Styles from '@/components/footer/Footer.module.scss';
+import Styles from '@/_components/footer/Footer.module.scss';
 import { FaRegCopyright } from "react-icons/fa6";
 import { FaHeart, FaLongArrowAltUp } from "react-icons/fa";
 import { RefObject } from 'react';
