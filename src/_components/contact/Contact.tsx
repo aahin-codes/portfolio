@@ -78,7 +78,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                                 <FaLinkedin />
                                 <span>linkedin</span>
                                 <p>linkedin.com/in/aahink</p>
-                                <Link href={'https://linkedin.com/in/aahink'} target='_blank' rel='noreffer nofollow noopener'></Link>
+                                <Link href={'https://linkedin.com/in/aahin-k'} target='_blank' rel='noreffer nofollow noopener'></Link>
                             </div>
                             <div className={Styles.card}>
                                 <FaGithub />
