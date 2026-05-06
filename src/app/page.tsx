@@ -7,6 +7,7 @@ import Projects from "@/_components/projects/Projects";
 import Contact from "@/_components/contact/Contact";
 import { useMemo, useRef } from "react";
 import Footer from "@/_components/footer/Footer";
+import Experience from "@/_components/experience/Experience";
 
 export default function Home() {
 
@@ -15,13 +16,18 @@ export default function Home() {
   const skillsRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
-
+  const experienceRef = useRef<HTMLDivElement | null>(null);
+  const certificationsRef = useRef<HTMLDivElement | null>(null);
+  const educationRef = useRef<HTMLDivElement | null>(null);
   const sectionRefs = useMemo(() => ({
     home: heroRef,
+    experience: experienceRef,
     about: aboutRef,
-    work: projectsRef,
+    project: projectsRef,
     skills: skillsRef,
     contact: contactRef,
+    certifications: certificationsRef,
+    education: educationRef,
   }), []);
 
   return (
@@ -29,9 +35,12 @@ export default function Home() {
     <div>
       {<Navbar sectionRefs={sectionRefs}/>}
       {<Hero ref={heroRef} sectionRefs={sectionRefs}/>}
-      {<About ref={aboutRef} />}
+       {<About ref={aboutRef} />}
+      {<Experience ref={experienceRef} />}
       {<Skills ref={skillsRef} />}
       {<Projects ref={projectsRef} />}
+      {/* Certifications */}
+      {/* Education */}
       {<Contact ref={contactRef} />}
       {<Footer sectionRefs={sectionRefs}/>}
     </div>

@@ -126,6 +126,9 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
                     <span>Figma</span>
                     <span>Redux</span>
                     <span>Axios</span>
+                    <span>Vercel</span>
+                    <span>Vite</span>
+                    <span>Git</span>
 
                 </div>
             </div>

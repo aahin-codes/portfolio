@@ -11,7 +11,7 @@ const typewritingText = ['React Experiences',
 interface SectionRefs {
     home: RefObject<HTMLDivElement | null>;
     about: RefObject<HTMLDivElement | null>;
-    work: RefObject<HTMLDivElement | null>;
+    project: RefObject<HTMLDivElement | null>;
     skills: RefObject<HTMLDivElement | null>;
     contact: RefObject<HTMLDivElement | null>;
 }
@@ -55,7 +55,7 @@ const Hero = forwardRef<HTMLDivElement, heroProps>((props, ref) => {
             <div className={Styles.wrapper}>
                 <span className={Styles.underScore}>Available for work</span>
                 <h1>Hi. I'm <span>Sheik Aahin</span></h1>
-                <h2>Front End Developer</h2>
+                <h2>Web Developer | Frontend & Full-Stack</h2>
                 <p>2 years crafting <span>{displayedText}</span></p>
                 <div className={Styles.specialization}>
                     <p>// Full-stack developer specializing in React & Node.js</p>
@@ -63,7 +63,7 @@ const Hero = forwardRef<HTMLDivElement, heroProps>((props, ref) => {
                     <p>// Currently open to full-time & freelance roles</p>
                 </div>
                 <div className={Styles["hero-buttons"]}>
-                    <button type="button" onClick={()=>scrollTo('work')}>view my work</button>
+                    <button type="button" onClick={()=>scrollTo('project')}>view my work</button>
                     <button type='button' onClick={()=>scrollTo('contact')}>get in touch</button>
                 </div>
                 <div className={Styles["small-overview"]}>

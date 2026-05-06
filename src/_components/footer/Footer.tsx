@@ -7,7 +7,7 @@ import { RefObject } from 'react';
 interface SectionRefs {
   home: RefObject<HTMLDivElement | null>;
   about: RefObject<HTMLDivElement | null>;
-  work: RefObject<HTMLDivElement | null>;
+  project: RefObject<HTMLDivElement | null>;
   skills: RefObject<HTMLDivElement | null>;
   contact: RefObject<HTMLDivElement | null>;
 }
@@ -33,9 +33,9 @@ const Footer = ({sectionRefs}:footerProps) => {
               }>about</button>
               <button type="button" onClick={
                 ()=>{
-                  sectionRefs.work.current?.scrollIntoView({behavior:"smooth"})
+                  sectionRefs.project.current?.scrollIntoView({behavior:"smooth"})
                 }
-              }>work</button>
+              }>project</button>
               <button type="button" onClick={
                 ()=>{
                   sectionRefs.contact.current?.scrollIntoView({behavior:"smooth"})

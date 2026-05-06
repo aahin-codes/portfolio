@@ -71,8 +71,8 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                             <div className={Styles.card}>
                                 <IoIosMail />
                                 <span>email</span>
-                                <p>this.aahin@gmail.com</p>
-                                <Link href={'mailto:this.aahin@gmail.com'} target='_blank' rel='noreffer nofollow noopener'></Link>
+                                <p>aahin2001@gmail.com</p>
+                                <Link href={'mailto:aahin2001@gmail.com'} target='_blank' rel='noreffer nofollow noopener'></Link>
                             </div>
                             <div className={Styles.card}>
                                 <FaLinkedin />

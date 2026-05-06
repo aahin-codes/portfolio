@@ -1,6 +1,5 @@
 'use client'
 import Styles from '@/_components/projects/Projects.module.scss';
-import { Span } from 'next/dist/trace';
 import Link from 'next/link';
 import { forwardRef } from 'react';
 
@@ -65,7 +64,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             <div className={Styles.wrapper}>
                 <span className={Styles.underScore}>my work</span>
                 <h2>Selected Projects</h2>
-                <p>// 12 projects shipped · 8 live in production</p>
+                {/* <p>// 12 projects · 3 live in production</p> */}
                 <div className={Styles.tabs}>
                     <span>All</span>
                     <span>React</span>

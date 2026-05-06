@@ -35,7 +35,7 @@ const About = forwardRef<HTMLDivElement>( (props, ref) => {
                     </div>
                     <div className={Styles.content}>
                         <p>I'm a <span>web developer with 2 years of hands-on experience</span> building scalable, performant web applications. I care deeply about clean code, great UX, and shipping products people actually love to use.</p>
-                        <p>Started freelancing while in college, landed my first full-time role right after graduation. Since then I've worked across <span>startups and small agencies</span>, picking up the full stack along the way.</p>
+                        <p>Contract Web Developer at ManageEngine (Zoho) since Sep 2024, building pages for 19+ enterprise products.</p>
                         <div className={Styles.timeline}>
                             <div>
                                 <span>2024 - present</span>
