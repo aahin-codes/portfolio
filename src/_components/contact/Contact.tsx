@@ -77,11 +77,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                             <div className={Styles.card}>
                                 <FaLinkedin />
                                 <span>linkedin</span>
-<<<<<<< HEAD
-                                <p>linkedin.com/in/aahink</p>
-=======
                                 <p>linkedin.com/in/aahin-k</p>
->>>>>>> 06f20a0 (Linkedin url path recorrected)
                                 <Link href={'https://linkedin.com/in/aahin-k'} target='_blank' rel='noreffer nofollow noopener'></Link>
                             </div>
                             <div className={Styles.card}>
