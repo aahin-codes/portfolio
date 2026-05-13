@@ -23,11 +23,11 @@ export default function Home() {
     home: heroRef,
     experience: experienceRef,
     about: aboutRef,
-    project: projectsRef,
+    projects: projectsRef,
     skills: skillsRef,
-    contact: contactRef,
-    certifications: certificationsRef,
     education: educationRef,
+    certifications: certificationsRef,
+    contact: contactRef,
   }), []);
 
   return (

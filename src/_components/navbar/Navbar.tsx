@@ -53,7 +53,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
   
   function handleNavClick(key: NavLink) {
     setActiveLink(key);
-    sectionRefs[key].current?.scrollIntoView({ behavior: 'smooth' });
+    sectionRefs[key]?.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
 

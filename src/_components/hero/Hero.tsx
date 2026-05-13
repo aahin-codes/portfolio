@@ -11,7 +11,7 @@ const typewritingText = ['React Experiences',
 interface SectionRefs {
     home: RefObject<HTMLDivElement | null>;
     about: RefObject<HTMLDivElement | null>;
-    project: RefObject<HTMLDivElement | null>;
+    projects: RefObject<HTMLDivElement | null>;
     skills: RefObject<HTMLDivElement | null>;
     contact: RefObject<HTMLDivElement | null>;
 }
@@ -63,7 +63,7 @@ const Hero = forwardRef<HTMLDivElement, heroProps>((props, ref) => {
                     <p>// Currently open to full-time & freelance roles</p>
                 </div>
                 <div className={Styles["hero-buttons"]}>
-                    <button type="button" onClick={()=>scrollTo('project')}>view my work</button>
+                    <button type="button" onClick={()=>scrollTo('projects')}>view my work</button>
                     <button type='button' onClick={()=>scrollTo('contact')}>get in touch</button>
                 </div>
                 <div className={Styles["small-overview"]}>
