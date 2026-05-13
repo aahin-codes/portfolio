@@ -7,8 +7,11 @@ import { useEffect, useState, forwardRef, RefObject } from 'react';
 interface SectionRefs {
   home: RefObject<HTMLDivElement | null>;
   about: RefObject<HTMLDivElement | null>;
-  project: RefObject<HTMLDivElement | null>;
+  experience: RefObject<HTMLDivElement | null>;
+  projects: RefObject<HTMLDivElement | null>;
   skills: RefObject<HTMLDivElement | null>;
+  certifications: RefObject<HTMLDivElement | null>;
+  education: RefObject<HTMLDivElement | null>;
   contact: RefObject<HTMLDivElement | null>;
 }
 
@@ -16,7 +19,7 @@ interface NavbarProps {
   sectionRefs: SectionRefs;
 }
 
-const NAV_LINKS = ['home', 'about','skills' ,'project', 'contact'] as const;
+const NAV_LINKS = ['home', 'about', 'experience', 'skills', 'projects', 'certifications', 'education', 'contact'] as const;
 type NavLink = typeof NAV_LINKS[number];
 
 export const Navbar = ({ sectionRefs }: NavbarProps) => {

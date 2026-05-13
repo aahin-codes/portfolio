@@ -28,8 +28,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   scroll-padding-top: calc(100px); 
-    -webkit-tap-highlight-color: transparent;
+  scroll-padding-top: 100px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
