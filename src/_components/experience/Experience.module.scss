@@ -1,7 +1,8 @@
 .experienceContainer {
     // padding-top: 100px;
     // min-height: 100dvh;
-    background-color: var(--bg);
+    background-color: var(--color-bg);
+    margin-top: 50px;
 
 
 
@@ -11,36 +12,35 @@
         max-width: 950px;
         margin: 0 auto;
 
-        .underScore {
+        .dot {
             position: relative;
-            color: var(--accent);
+            color: var(--color-text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding-left: 35px;
+            padding-left: 30px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
 
+
             &::before {
                 content: '';
                 position: absolute;
-                height: 1px;
-                width: 30px;
-                background-color: var(--accent);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: var(--color-green);
                 left: 0;
             }
         }
 
         >h2 {
-            font-size: 30px;
-            color: var(--text);
+            font-size: 40px;
+            color: var(--color-accent);
             margin-top: 30px;
         }
 
-        >p {
-            color: var(--muted);
-            margin-top: 15px;
-        }
+        
 
         >.experienceList {
             margin-top: 20px;
@@ -54,7 +54,7 @@
                 &::before {
                     content: '';
                     position: absolute;
-                    background-color: var(--accent);
+                    background-color: var(--color-accent);
                     width: 20px;
                     height: 20px;
                     position: absolute;
@@ -64,27 +64,34 @@
 
                 >div:first-child {
                     font-family: var(--font-code);
-                    border-right: 1px solid var(--muted);
+                    border-right: 1px solid var(--color-border);
                     display: flex;
                     flex-shrink: 0;
                     flex-direction: column;
                     align-items: center;
                     justify-content: flex-start;
                     padding-right: 20px;
+                    color: var(--color-text-muted);
                 }
 
                 >div:last-child {
                     padding-left: 20px;
+                    color: var(--color-text-muted);
 
+                     p {
+                        margin-bottom: 10px;
+                        
+                     }
                     h2 {
                         padding-bottom: 5px;
+                        color: var(--color-text-primary);
                     }
 
-                    p {}
+                   
 
                     >span {
-                        background-color: var(--accent);
-                        color: var(--bg);
+                        background-color: var(--color-accent);
+                        color: var(--color-bg);
                         font-size: 12px;
                         padding: 2px 5px;
                         border-radius: 3px;
@@ -106,12 +113,12 @@
                         margin-top: 15px;
 
                         span {
-                            background-color: #00e5a012;
-                            color: var(--accent);
+                            background-color: var(--color-accent-dim);
+                            color: var(--color-accent);
                             font-size: 12px;
                             padding: 2px 8px;
                             border-radius: 10px;
-                            border: 1px solid var(--accent);
+                            border: 1px solid var(--color-accent);
                         }
                     }
                 }
@@ -146,7 +153,7 @@
                     &::after {
                         content: '';
                         position: absolute;
-                        background-color: var(--muted);
+                        background-color: var(--color-border);
                         width: 2px;
                         height: calc(100%);
                         left: 0px;
@@ -157,7 +164,9 @@
                         border: none;
                         flex-direction: row;
                         justify-content: space-between;
-                        color: var(--muted);
+                        padding-bottom: 3px;
+                        border-bottom:1px solid var(--color-accent-dim) ;
+                        
 
                     }
 

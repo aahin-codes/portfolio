@@ -53,7 +53,7 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <div className={Styles['skills-container']} ref={ref}>
             <div className={Styles.wrapper}>
-                <span className={Styles.underScore}>skills</span>
+                <span className={Styles.dot}>skills</span>
                 <h2>Technical toolkit</h2>
                 <div className={Styles['skill-cards']}>
                     <div className={`${Styles['skill-card']} ${Styles['front-end']}`}>

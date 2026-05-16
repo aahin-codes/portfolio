@@ -1,9 +1,10 @@
 .projectContainer {
     // padding-top: 100px;
     // min-height: 100dvh;
-    background-color: var(--bg);
+    background-color: var(--color-bg);
     --project-number: 01;
-    
+    margin-top: 50px;
+
 
 
 
@@ -12,34 +13,36 @@
         max-width: 950px;
         margin: 0 auto;
 
-        .underScore {
+        .dot {
             position: relative;
-            color: var(--accent);
+            color: var(--color-text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding-left: 35px;
+            padding-left: 30px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
 
+
             &::before {
                 content: '';
                 position: absolute;
-                height: 1px;
-                width: 30px;
-                background-color: var(--accent);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: var(--color-green);
                 left: 0;
             }
         }
 
         >h2 {
-            font-size: 30px;
-            color: var(--text);
+            font-size: 40px;
+            color: var(--color-accent);
             margin-top: 30px;
         }
 
         >p {
-            color: var(--muted);
+            color: var(--color-text-muted);
             margin-top: 15px;
         }
 
@@ -52,8 +55,8 @@
 
             span {
 
-                color: var(--muted);
-                border: 1px solid var(--border2);
+                color: var(--color-text-muted);
+                border: 1px solid var(--color-border);
                 padding: 6px 12px;
                 border-radius: 10px;
             }
@@ -61,7 +64,7 @@
 
         .projectCards {
             margin-top: 50px;
-            
+
 
 
             >.wrapper {
@@ -72,23 +75,24 @@
                 padding: 30px;
 
 
-                .projectCard:first-child {
-                    grid-column: 1 / -1;
-                }
+                // .projectCard:first-child {
+                //     grid-column: 1 / -1;
+                // }
 
                 .projectCard {
                     padding: 20px;
-                    background-color: var(--surface2);
+                    background-color: var(--color-bg);
                     position: relative;
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
                     gap: 30px;
-                    border: 1px solid var(--border2);
+                    border: 1px solid var(--color-border);
                     border-radius: 8px;
                     overflow: hidden;
                     transition: transform .3s ease-in-out;
                     box-sizing: border-box;
+
 
                     &:hover {
                         // border-color: var(--accent);
@@ -103,7 +107,7 @@
                         left: 0;
                         top: 0;
                         width: 5px;
-                        background: linear-gradient(var(--accent), var(--accent2));
+                        background: linear-gradient(var(--color-accent), var(--color-bg));
                     }
 
 
@@ -111,11 +115,11 @@
                         position: absolute;
                         right: 20px;
                         top: 20px;
-                        background-color: rgba(0, 229, 160, 0.07);
-                        border: 1px solid var(--accent);
+                        background-color: var(--color-accent-dim);
+                        border: 1px solid var(--color-accent);
                         padding: 4px 8px;
                         border-radius: 10px;
-                        color: var(--accent);
+                        color: var(--color-accent);
                         text-transform: uppercase;
                         font-size: 8px;
                         font-family: var(--font-code);
@@ -141,20 +145,20 @@
                             content: attr(data-project-number);
                             position: absolute;
                             top: -100px;
-                            color: var(--accent);
+                            color: var(--color-accent);
                             font-size: 60px;
                             font-weight: 700;
                             font-family: var(--font-code);
                         }
 
                         h2 {
-                            color: var(--text);
+                            color: var(--color-text-primary);
                             margin-bottom: 15px;
                         }
 
                         >p {
                             line-height: 26px;
-                            color: var(--muted);
+                            color: var(--color-text-muted);
                             font-family: var(--font-code);
                             font-size: 14px;
                         }
@@ -169,8 +173,8 @@
 
                             span {
 
-                                color: var(--muted);
-                                border: 1px solid var(--border2);
+                                color: var(--color-accent);
+                                border: 1px solid var(--color-border);
                                 padding: 6px 12px;
                                 border-radius: 10px;
                                 font-size: 12px;
@@ -193,22 +197,38 @@
 
                                     padding-left: 10px;
                                     text-transform: lowercase;
-                                    color: var(--muted);
+                                    color: var(--color-text-muted);
                                     font-family: var(--font-code);
                                     text-decoration: none;
 
                                     &:first-child {
-
-                                        color: var(--accent);
+                                        color: var(--color-accent);
                                     }
                                 }
                             }
                         }
                     }
 
-                    >.right {
-                        display: none;
+                    &.soon {
+
+                        >.left {
+
+                            h2 {
+                                font-size: 40px;
+
+                            }
+
+                            p {
+                                font-size: 20px;
+                            }
+
+
+                        }
                     }
+
+                    // >.right {
+                    //     display: none;
+                    // }
 
 
                 }
@@ -222,10 +242,11 @@
 @media screen and (min-width:320px) and (max-width:600px) {
     .projectContainer {
         >.wrapper {
+
             .projectCards {
 
-
                 >.wrapper {
+                    padding: 10px;
                     grid-template-columns: 1fr;
                 }
             }

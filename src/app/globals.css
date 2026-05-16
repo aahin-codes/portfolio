@@ -22,6 +22,22 @@
   --dim: #3d3b55;
   --border: rgba(255, 255, 255, 0.07);
   --border2: rgba(255, 255, 255, 0.12);
+
+  /* New desgin */
+
+  --color-bg: #FFFFFF;
+  --color-surface: #FAFAFA;
+  --color-text-primary: #111111;
+  --color-text-muted: #6B6B6B;
+  --color-text-hint: #AAAAAA;
+  --color-accent: #D4537E;
+  --color-accent-dim: rgba(212, 83, 126 ,0.1);
+  --color-border: #E5E5E5;
+  --color-green:#00e5a0;
+  --font-all: var(--font-inter);
+  --font-italic: var(--font-playfair);
+  --radius-card: 10px;
+  --radius-pill: 20px;
 }
 
 * {
@@ -33,6 +49,7 @@
 }
 
 body {
-  font-family: var(--font-all);
+  font-family: var(--font-syne);
+  font-weight: normal;
   font-size: 16px;
 }

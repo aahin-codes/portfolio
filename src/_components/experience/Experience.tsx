@@ -5,7 +5,7 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <div className={Styles.experienceContainer} ref={ref}>
             <div className={Styles.wrapper}>
-                <span className={Styles.underScore}>Experience</span>
+                <span className={Styles.dot}>Experience</span>
                 <h2>Where I've worked</h2>
 
                 <div className={Styles.experienceList}>
@@ -15,8 +15,8 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
                             <span>Present</span>
                         </div>
                         <div>
+                            <p>ManageEngine &middot; Zoho Corporation, Chennai</p>
                             <h2>Web Developer</h2>
-                            <p>ManageEngine · Zoho Corporation, Chennai</p>
                             <span>Contract</span>
                             <ul>
                                 <li>Built and maintained web pages for 19+ enterprise products — ADMP, M365, LOG360, ELA and more</li>

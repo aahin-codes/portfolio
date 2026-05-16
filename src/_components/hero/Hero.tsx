@@ -53,18 +53,18 @@ const Hero = forwardRef<HTMLDivElement, heroProps>((props, ref) => {
     return (
         <div className={Styles['hero-container']} ref={ref}>
             <div className={Styles.wrapper}>
-                <span className={Styles.underScore}>Available for work</span>
+                <span className={Styles.dot}>Available for work</span>
                 <h1>Hi. I'm <span>Sheik Aahin</span></h1>
-                <h2>Web Developer | Frontend & Full-Stack</h2>
+                <h2>Frontend dev who builds <span>things</span> people use.</h2>
                 <p>2 years crafting <span>{displayedText}</span></p>
                 <div className={Styles.specialization}>
-                    <p>// Full-stack developer specializing in React & Node.js</p>
-                    <p>// Turning complex problems into elegant, fast interfaces</p>
+                    <p>// React &#183; Node.js &#183; TypeScript — Chennai, India.</p>
+                    <p>// 2 years shipping real products at ManageEngine / Zoho.</p>
                     <p>// Currently open to full-time & freelance roles</p>
                 </div>
                 <div className={Styles["hero-buttons"]}>
                     <button type="button" onClick={()=>scrollTo('projects')}>view my work</button>
-                    <button type='button' onClick={()=>scrollTo('contact')}>get in touch</button>
+                    <button type='button'>get in touch</button>
                 </div>
                 <div className={Styles["small-overview"]}>
                     <div className={Styles.wrapper}>
@@ -76,10 +76,10 @@ const Hero = forwardRef<HTMLDivElement, heroProps>((props, ref) => {
                             <span>2yr</span>
                             <span>Experience</span>
                         </div>
-                        {/* <div>
-                            <span>2</span>
-                            <span>Students</span>
-                        </div> */}
+                        <div>
+                            <span>19+</span>
+                            <span>Products at Zoho</span>
+                        </div>
                     </div>
                 </div>
             </div>

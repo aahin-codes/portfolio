@@ -19,7 +19,7 @@ interface NavbarProps {
   sectionRefs: SectionRefs;
 }
 
-const NAV_LINKS = ['home', 'about', 'experience', 'skills', 'projects', 'certifications', 'education', 'contact'] as const;
+const NAV_LINKS = ['about', 'experience', 'skills','projects', 'contact'] as const;
 type NavLink = typeof NAV_LINKS[number];
 
 export const Navbar = ({ sectionRefs }: NavbarProps) => {
@@ -39,7 +39,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
             setActiveLink(key);
           }
         },
-        { threshold: 0.5 }
+        { threshold: 0.9 }
       );
 
       observer.observe(el);

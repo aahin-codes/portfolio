@@ -1,6 +1,6 @@
 .hero-container {
     margin-top: 100px;
-    background-color: var(--bg);
+    background-color: var(--color-bg);
     padding-top: 60px;
     min-height: 100dvh;
 
@@ -10,118 +10,132 @@
         max-width: 950px;
         margin: 0 auto;
 
-        .underScore {
+        .dot {
             position: relative;
-            color: var(--accent);
+            color: var(--color-text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding-left: 35px;
+            padding-left: 30px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            
 
             &::before {
                 content: '';
                 position: absolute;
-                height: 1px;
-                width: 30px;
-                background-color: var(--accent);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: var(--color-green);
                 left: 0;
+                animation: blink 1.75s ease-in-out alternate infinite;
             }
         }
 
         >h1 {
-            color: var(--surface2);
-            font-size: 50px;
+            color: var(--color-text-muted);
+            font-size: 70px;
             margin-top: 30px;
             margin-bottom: 15px;
 
             span {
-                color: var(--accent);
+                color: var(--color-accent);
             }
         }
 
         >h2 {
-            color: var(--text);
-            font-size: 35px;
+            color: var(--color-text-primary);
+            font-size: 55px;
+            max-width: 60%;
             margin-bottom: 10px;
+
+            span {
+                color: var(--color-accent);
+                font-family: var(--font-italic);
+                font-style: italic;
+            }
         }
 
         >p {
-            color: var(--muted);
+            color: var(--color-text-muted);
             font-size: 20px;
+            margin-top: 30px;
 
             span {
-                color: var(--accent2);
+                color: var(--color-green);
                 position: relative;
-                &::after{
+
+                &::after {
                     content: '';
                     position: absolute;
                     right: -5px;
                     top: 0;
                     width: 3px;
                     height: 100%;
-                    background-color: var(--accent2);
+                    background-color: var(--color-text-muted);
                     animation: blink .5s ease-in-out alternate infinite;
                 }
-                
-            }
-            @keyframes blink {
 
-                0%{
-                    opacity: 1;
-                }
-                50%{
-                    opacity: 0;
-                }
-                
-                100%{
-                    opacity: 1;
-                }
-                
             }
+
+
         }
 
         .specialization {
             margin-top: 30px;
 
             p {
-                color: var(--muted);
-                margin-bottom: 12px;
+                color: var(--color-text-muted);
+                margin-bottom: 15px;
             }
         }
 
         .hero-buttons {
-            margin-top: 30px;
+            margin-top: 50px;
 
             button {
                 border: none;
-                border: 1px solid var(--border2);
+                border: 1px solid var(--color-border);
                 border-radius: 4px;
-                padding: 8px 16px;
+                padding: 10px 16px;
                 background-color: transparent;
-                color: var(--text);
+                color: var(--color-text-primary);
                 font-family: var(--font-code);
                 letter-spacing: 1px;
                 cursor: pointer;
+                transition: .25s ease-in-out;
 
                 &:first-child {
-                    background-color: var(--accent);
-                    color: var(--bg);
+                    background-color: var(--color-accent);
+                    color: var(--color-bg);
                     margin-right: 20px;
+
+
+                    &:hover {
+                        color: var(--color-accent);
+                        background-color: var(--color-bg);
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--color-text-primary);
+                    color: var(--color-bg);
                 }
             }
         }
 
         .small-overview {
+            border-top: 1px solid var(--color-border);
             display: flex;
-            justify-content: flex-end;
-            margin-top: 80px;
+            justify-content: flex-start;
+            margin-top: 40px;
+            padding-top: 40px;
 
             .wrapper {
                 display: flex;
                 gap: 25px;
-                color: var(--text);
+
 
                 >div {
                     display: flex;
@@ -132,7 +146,7 @@
 
                     span {
                         letter-spacing: 1px;
-                        color: var(--accent);
+                        color: var(--color-accent);
 
                         // font-family: var(--font-all);
                         &:first-child {
@@ -142,9 +156,9 @@
 
                         &:last-child {
                             text-transform: uppercase;
-                            color: var(--muted);
                             font-family: var(--font-code);
-                            font-size: 12px;
+                            font-size: 14px;
+                            color: var(--color-text-primary);
                         }
                     }
                 }
@@ -157,16 +171,33 @@
     .hero-container {
         >.wrapper {
             .hero-buttons {
-                
-                button:last-child{
+
+                button:last-child {
                     margin-top: 20px;
                 }
 
             }
-            .small-overview{
+
+            .small-overview {
                 margin-top: 80px;
                 justify-content: center;
             }
         }
     }
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
 }

@@ -1,8 +1,9 @@
 .skills-container {
     // padding-top: 100px;
-    background-color: var(--bg);
+    background-color: var(--color-bg);
     // min-height: 100dvh;
-    --skill-width:0%;
+    margin-top: 50px;
+    --skill-width: 0%;
 
 
 
@@ -11,29 +12,31 @@
         max-width: 950px;
         margin: 0 auto;
 
-        .underScore {
+        .dot {
             position: relative;
-            color: var(--accent);
+            color: var(--color-text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding-left: 35px;
+            padding-left: 30px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
 
+
             &::before {
                 content: '';
                 position: absolute;
-                height: 1px;
-                width: 30px;
-                background-color: var(--accent);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: var(--color-green);
                 left: 0;
             }
         }
 
         >h2 {
-            font-size: 30px;
-            color: var(--text);
+            font-size: 40px;
+            color: var(--color-accent);
             margin-top: 30px;
         }
 
@@ -45,8 +48,8 @@
 
             .skill-card {
                 >p {
-                    color: var(--muted);
-                    border-bottom: 1px solid var(--border);
+                    color: var(--color-text-muted);
+                    border-bottom: 1px solid var(--color-border);
                     letter-spacing: 2px;
                     padding-bottom: 10px;
                     font-size: 12px;
@@ -68,46 +71,46 @@
                         width: 100%;
                         left: 0;
                         bottom: 0;
-                        background-color: var(--dim);
+                        background-color: var(--color-accent-dim);
                         border-radius: 10px;
                     }
 
                     &::after {
-                        background-color: var(--accent);
+                        background-color: var(--color-accent);
                         width: var(--skill-width);
                     }
 
                     span {
-                        color: var(--text);
+                        color: var(--color-text-muted);
 
                         &:last-child {
-                            color: var(--accent);
+                            color: var(--color-accent);
                             font-family: var(--font-code);
                             font-weight: 700;
                         }
                     }
                 }
 
-                &.back-end {
-                    >div {
-                        &::after {
-                            background-color: var(--accent2);
-                        }
+                // &.back-end {
+                //     >div {
+                //         &::after {
+                //             background-color: var(--color-surface);
+                //         }
 
-                        span {
+                //         span {
 
 
-                            &:last-child {
-                                color: var(--accent2);
-                            }
-                        }
-                    }
-                }
+                //             &:last-child {
+                //                 color: var(--ac);
+                //             }
+                //         }
+                //     }
+                // }
             }
         }
 
         >p {
-            color: var(--muted);
+            color: var(--color-text-muted);
             letter-spacing: 2px;
             padding-bottom: 10px;
             font-size: 12px;
@@ -123,8 +126,8 @@
 
             span {
 
-                color: var(--muted);
-                border: 1px solid var(--border2);
+                color: var(--color-accent);
+                border: 1px solid var(--color-border);
                 padding: 6px 12px;
                 border-radius: 10px;
             }

@@ -1,6 +1,7 @@
 .about-container {
     // padding-top: 100px;
-    background-color: var(--bg);
+    background-color: var(--color-bg);
+    margin-top: 50px;
     // min-height: 100dvh;
 
 
@@ -10,195 +11,128 @@
         max-width: 950px;
         margin: 0 auto;
 
-        .underScore {
+        .dot {
             position: relative;
-            color: var(--accent);
+            color: var(--color-text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding-left: 35px;
+            padding-left: 30px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
 
+
             &::before {
                 content: '';
                 position: absolute;
-                height: 1px;
-                width: 30px;
-                background-color: var(--accent);
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: var(--color-green);
                 left: 0;
             }
         }
 
         >h2 {
-            font-size: 30px;
-            color: var(--text);
+            font-size: 40px;
+            color: var(--color-accent);
             margin-top: 30px;
         }
 
-        >.card-section {
+        >.section {
             margin-top: 30px;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
 
-            .card {
-                max-width: 400px;
+            .left {
+
                 width: 50%;
-                background-color: var(--surface);
-                border: 1px solid var(--border2);
-                border-radius: 6px;
+                flex-shrink: 0;
 
-                >.wrapper {
-                    padding: 20px;
+                >h3 {
+                    color: var(--color-text-muted);
+                    font-size: 30px;
+                }
 
-                    .profileImage {
-                        height: 75px;
-                        width: 75px;
-                        border-radius: 50%;
-                        background-color: var(--accent2);
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-weight: 700;
-                        font-size: 25px;
-                        letter-spacing: 2px;
+                > p {
+                    color: var(--color-text-muted);
+                    margin-top: 10px;
+                }
+                div:nth-child(3){
+                   display: flex;
+                   flex-wrap: wrap;
+                   align-items: center;
+                   justify-content: flex-start;
+                   gap: 5px;
+                   margin-top: 5px;
+                   max-width: 70%;
 
-                        &::before {
-                            content: 'SA';
+                   span{
+                    background-color: var(--color-accent);
+                    color: var(--color-bg);
+                    font-size: 10px;
+                    font-family: var(--font-code);
+                    padding: 4px 10px;
+                    border-radius: 10px;
+                   }
+                }
+                div:last-child{
+                    margin-top: 20px;
+                    p{
+                        margin-bottom: 5px;
+                        color: var(--color-text-muted);
+
+                        &:last-child{
+                            span{
+                                color: var(--color-text-muted);
+                            }
+                            color: var(--color-green);
                         }
-                    }
 
-                    h3 {
-                        color: var(--text);
-                        margin-top: 15px;
-                    }
-
-                    >p {
-                        color: var(--accent);
-                        margin-top: 12px;
-                        font-size: 12px;
-                        font-family: var(--font-code);
-                    }
-
-                    .contactSection {
-                        font-family: var(--font-code);
-                        font-size: 14px;
-                        margin-top: 15px;
-                        color: var(--muted);
-
-                        p {
-                            margin-top: 4px;
-                        }
-                    }
-
-                    .skills {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 10px;
-                        align-items: center;
-                        margin-top: 30px;
-
-                        span {
-                            background-color: rgba(0, 229, 160, 0.07);
-                            border: 1px solid var(--accent);
-                            padding: 6px 12px;
-                            border-radius: 20px;
-                            font-size: 12px;
-                            color: var(--accent);
-                        }
                     }
                 }
             }
 
-            .content {
-                padding: 0 20px;
-                flex: 1;
-                line-height: 24px;
+            .right {
+                width: 50%;
+                flex-shrink: 0;
 
-                >p {
-                    color: var(--muted);
-                     margin-bottom: 20px;
-
-                    >span {
-                        color: var(--text);
-                    }
+                p{
+                    line-height: 28px;
+                    color: var(--color-text-muted);
+                    padding-bottom: 20px;
+                }
+                p.quote{
+                    font-style: italic;
+                    font-family: var(--font-italic);
+                    border-left: 2px solid var(--color-accent);
+                    padding-left: 10px;
+                    padding-bottom: 0px;
                 }
 
-                .timeline {
-                    >div {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        line-height: 18px;
-                        margin-left: 30px;
-                        margin-top: 30px;
-                        position: relative;
-
-                        &:last-child {
-                            &::before {
-                                background-color: var(--accent);
-                            }
-                        }
-
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            height: 10px;
-                            width: 10px;
-                            background-color: var(--accent2);
-                            left: -30px;
-                            top: 5px;
-                            z-index: 2;
-                            border-radius: 5px;
-                        }
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            height: 100%;
-                            width: 1px;
-                            background-color: var(--muted);
-                            left: -25.5px;
-                            top: 6px;
-                        }
-
-                        span {
-                            color: var(--accent2);
-                            font-size: 14px;
-                        }
-
-                        p {
-                            color: var(--text);
-                        }
-
-                        p:last-child {
-                            font-size: 12px;
-                            color: var(--muted);
-                        }
-                    }
-                }
             }
 
         }
     }
 }
 
-@media screen and (min-width:320px) and (max-width:600px) {
+@media screen and (min-width:320px) and (max-width:900px) {
     .about-container {
 
         >.wrapper {
-             >.card-section {
-                gap: 40px;
-                .card{
+            >.section {
+            //    gap: 40px;
+
+                .left {
                     width: 100%;
                 }
-                .content{
-                    width: 100%;
-                    
+
+                .right {
+                    width: 90%;
+
                 }
-             }
+            }
         }
     }
 }

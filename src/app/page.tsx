@@ -39,8 +39,6 @@ export default function Home() {
       {<Experience ref={experienceRef} />}
       {<Skills ref={skillsRef} />}
       {<Projects ref={projectsRef} />}
-      {/* Certifications */}
-      {/* Education */}
       {<Contact ref={contactRef} />}
       {<Footer sectionRefs={sectionRefs}/>}
     </div>
