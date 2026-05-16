@@ -1,6 +1,6 @@
 .footerContainer {
-    background-color: var(--bg);
-    border-top: 1px solid var(--border);
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
     padding: 20px;
 
     >.wrapper {
@@ -25,19 +25,22 @@
         .left {
 
             p {
-                color: var(--muted);
+                color: var(--color-text-muted);
 
                 &:first-child {
-                    color: var(--accent);
+                    color: var(--color-accent);
 
                     span {
-                        color: var(--accent2)
+                        color: var(--color-accent)
                     }
                 }
 
                 svg {
                     vertical-align: middle;
                     margin: 0px 5px;
+                    &:last-child{
+                        color: var(--color-accent);
+                    }
                 }
             }
         }
@@ -45,11 +48,11 @@
         .right {
             button {
                 border: none;
-                border: 1px solid var(--border);
+                border: 1px solid var(--color-border);
                 border-radius: 4px;
                 padding: 4px 8px;
                 background-color: transparent;
-                color: var(--muted);
+                color: var(--color-text-muted);
                 cursor: pointer;
                 font-family: var(--font-code);
                 font-size: 13px;
@@ -57,6 +60,11 @@
                 svg {
                     margin-right: 5px;
                     vertical-align: middle;
+                }
+
+                &:hover {
+                    background-color: var(--color-accent);
+                    color: var(--color-bg);
                 }
             }
 

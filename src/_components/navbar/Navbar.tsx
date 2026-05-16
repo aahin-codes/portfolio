@@ -1,6 +1,7 @@
 'use client'
 import Styles from '@/_components/navbar/Navbar.module.scss';
 import { useEffect, useState, forwardRef, RefObject } from 'react';
+import { BsFillMoonStarsFill, BsMoon} from "react-icons/bs";
 
 
 
@@ -25,6 +26,7 @@ type NavLink = typeof NAV_LINKS[number];
 export const Navbar = ({ sectionRefs }: NavbarProps) => {
 
   const [activeLink, setActiveLink] = useState('home');
+  const [theme, setTheme] = useState('light');
   
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -39,7 +41,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
             setActiveLink(key);
           }
         },
-        { threshold: 0.9 }
+        { threshold: 0.8 }
       );
 
       observer.observe(el);
@@ -50,6 +52,8 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
     return () => observers.forEach((obs) => obs.disconnect());
   }, [sectionRefs]);
 
+  useEffect(()=>{},[])
+
   
   function handleNavClick(key: NavLink) {
     setActiveLink(key);
@@ -59,7 +63,6 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 
   function onUpdateActiveLink(value: string) {
     setActiveLink(value);
-
   }
   return (
     <nav className={`${Styles.nav}`}>
@@ -82,6 +85,17 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
         </div>
       </div>
       <div className={Styles['right-container']}>
+        {theme === 'light' ? (
+          <BsFillMoonStarsFill onClick={() => {
+            setTheme('dark');
+            document.body.setAttribute('data-theme', 'dark');
+          }} />
+        ) : (
+          <BsMoon onClick={() => {
+            setTheme('light');
+            document.body.setAttribute('data-theme', 'light');
+          }} />
+        )}
         <button type='button'>resume</button>
       </div>
     </nav>

@@ -4,48 +4,78 @@ import { forwardRef } from 'react';
 
 type Skill = {
     skill: string;
-    number: number;
 };
 
 type SkillCategory = {
     frontend?: Skill[];  // "?" means optional
     backend?: Skill[];
+    stateManagement?: Skill[];
+    toolsAndPlatforms?: Skill[];
+    designAndWorkflow?: Skill[];
 };
 
 
 const skills: SkillCategory[] = [{
     frontend: [
         {
-            skill: "React / Next.js",
-            number: 75
+            skill: "React / Next.js"
         },
         {
-            skill: "TypeScript",
-            number: 65
+            skill: "TypeScript"
         },
         {
-            skill: "JavaScript (ES6+)",
-            number: 79
+            skill: "JavaScript (ES6+)"
         },
         {
-            skill: "CSS /SCSS",
-            number: 85
+            skill: "CSS / SCSS"
+        },
+        {
+            skill: "HTML5"
         }
     ]
 }, {
     backend: [
         {
-            skill: "Node.js / Express",
-            number: 81
+            skill: "Node.js"
+        }, {
+            skill: "Express.js"
         },
         {
-            skill: "MongoDB",
-            number: 69
+            skill: "MongoDB"
         },
         {
-            skill: "REST APIs",
-            number: 70
+            skill: "REST APIs"
         }
+    ]
+}, {
+    stateManagement: [
+        {
+            skill: "Redux"
+        },
+        {
+            skill: "Context API"
+        }
+    ]
+}, {
+    toolsAndPlatforms: [
+        {
+            skill: "Git"
+        },
+        {
+            skill: "Vercel"
+        },
+        {
+            skill: "Vite"
+        },
+        {
+            skill: "Axios"
+        }
+    ]
+}, {
+    designAndWorkflow: [
+        {
+            skill: "Figma"
+        },
     ]
 }] as const;
 
@@ -56,81 +86,85 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
                 <span className={Styles.dot}>skills</span>
                 <h2>Technical toolkit</h2>
                 <div className={Styles['skill-cards']}>
-                    <div className={`${Styles['skill-card']} ${Styles['front-end']}`}>
+                    <div className={`${Styles['skill-card']}`}>
                         <p>FRONTEND</p>
-                        {
-                            skills.map((techStack) => {
+                        <div>
+                            {
+                                skills.map((techStack) => {
 
-                                return techStack.frontend?.map((skill,ind) => {
-                                    return (
-                                        <div style={{ "--skill-width": `${skill.number}%` }as React.CSSProperties} key={skill+""+ind}>
-                                            <span>{skill.skill}</span>
-                                            <span >{skill.number}</span>
-                                        </div>
-                                    )
+                                    return techStack.frontend?.map((skill, ind) => {
+                                        return (
+
+                                            <span key={skill.skill}>{skill.skill}</span>
+
+                                        )
+                                    })
                                 })
-                            })
-                        }
-                        {/* <div>
-                            <span>React/Next.js</span>
-                            <span>75</span>
-                        </div>
-                        <div>
-                            <span>TypeScript</span>
-                            <span>85</span>
-                        </div>
-                        <div>
-                            <span>CSS / SCSS</span>
-                            <span>91</span>
-                        </div>
-                        <div>
-                            <span>JavaScript (ES6+)</span>
-                            <span>87</span>
-                        </div> */}
+                            }</div>
                     </div>
-                    <div className={`${Styles['skill-card']} ${Styles['back-end']}`}>
-                        <p>BACKEND & TOOLS</p>
-                         {
-                            skills.map((techStack) => {
+                    <div className={`${Styles['skill-card']}`}>
+                        <p>BACKEND</p>
+                        <div>
+                            {
+                                skills.map((techStack) => {
 
-                                return techStack.backend?.map((skill,ind) => {
-                                    return (
-                                        <div style={{ "--skill-width": `${skill.number}%` } as React.CSSProperties} key={skill+""+ind}>
-                                            <span>{skill.skill}</span>
-                                            <span >{skill.number}</span>
-                                        </div>
-                                    )
+                                    return techStack.backend?.map((skill, ind) => {
+                                        return (
+
+                                            <span key={skill.skill}>{skill.skill}</span>
+                                        )
+                                    })
                                 })
-                            })
-                        }
-                        {/* <div>
-                            <span>Node.js / Express</span>
-                            <span>75</span>
-                        </div>
+                            }</div>
+                    </div>
+                    <div className={`${Styles['skill-card']}`}>
+                        <p>STATE MANAGEMENT</p>
                         <div>
-                            <span>MongoDB</span>
-                            <span>85</span>
-                        </div>
+                            {
+                                skills.map((techStack) => {
+
+                                    return techStack.stateManagement?.map((skill, ind) => {
+                                        return (
+
+                                            <span key={skill.skill}>{skill.skill}</span>
+
+                                        )
+                                    })
+                                })
+                            }</div>
+                    </div>
+                    <div className={`${Styles['skill-card']}`}>
+                        <p>TOOLS AND PLATFORMS</p>
                         <div>
-                            <span>REST APIs </span>
-                            <span>91</span>
-                        </div>
+                            {
+                                skills.map((techStack) => {
+
+                                    return techStack.toolsAndPlatforms?.map((skill, ind) => {
+                                        return (
+                                            <span key={skill.skill + ind}>{skill.skill}</span>
+                                        )
+                                    })
+                                })
+                            }</div>
+                    </div>
+                    <div className={`${Styles['skill-card']}`}>
+                        <p>DESIGN & WORKFLOW</p>
                         <div>
-                            <span>Git / GitHub Actions</span>
-                            <span>87</span>
-                        </div> */}
+                            {
+                                skills.map((techStack) => {
+
+                                    return techStack.designAndWorkflow?.map((skill, ind) => {
+                                        return (
+                                            <span key={skill.skill}>{skill.skill}</span>
+
+                                        )
+                                    })
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
-                <p>Also worked with</p>
-                <div>
-                    <span>Figma</span>
-                    <span>Redux</span>
-                    <span>Axios</span>
-                    <span>Vercel</span>
-                    <span>Vite</span>
-                    <span>Git</span>
 
-                </div>
             </div>
         </div>
     )

@@ -64,7 +64,7 @@ const Hero = forwardRef<HTMLDivElement, heroProps>((props, ref) => {
                 </div>
                 <div className={Styles["hero-buttons"]}>
                     <button type="button" onClick={()=>scrollTo('projects')}>view my work</button>
-                    <button type='button'>get in touch</button>
+                    <button type='button' onClick={()=>scrollTo('contact')}>get in touch</button>
                 </div>
                 <div className={Styles["small-overview"]}>
                     <div className={Styles.wrapper}>

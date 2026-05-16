@@ -8,6 +8,7 @@ import Contact from "@/_components/contact/Contact";
 import { useMemo, useRef } from "react";
 import Footer from "@/_components/footer/Footer";
 import Experience from "@/_components/experience/Experience";
+import { ThemeSide } from "@/_components/theme/Theme";
 
 export default function Home() {
 
@@ -41,6 +42,7 @@ export default function Home() {
       {<Projects ref={projectsRef} />}
       {<Contact ref={contactRef} />}
       {<Footer sectionRefs={sectionRefs}/>}
+      {<ThemeSide />}
     </div>
   );
 }

@@ -1,7 +1,4 @@
 .projectContainer {
-    // padding-top: 100px;
-    // min-height: 100dvh;
-    background-color: var(--color-bg);
     --project-number: 01;
     margin-top: 50px;
 
@@ -134,7 +131,7 @@
                     }
 
                     >.left {
-                        max-width: 85%;
+                        max-width: 100%;
                         width: 100%;
                     }
 

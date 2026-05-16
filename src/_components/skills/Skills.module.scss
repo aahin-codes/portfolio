@@ -1,9 +1,5 @@
 .skills-container {
-    // padding-top: 100px;
-    background-color: var(--color-bg);
-    // min-height: 100dvh;
     margin-top: 50px;
-    --skill-width: 0%;
 
 
 
@@ -58,78 +54,34 @@
                 >div {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 10px;
                     margin-top: 15px;
                     padding-bottom: 8px;
                     position: relative;
 
-                    &::before,
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        height: 2px;
-                        width: 100%;
-                        left: 0;
-                        bottom: 0;
-                        background-color: var(--color-accent-dim);
-                        border-radius: 10px;
-                    }
 
-                    &::after {
-                        background-color: var(--color-accent);
-                        width: var(--skill-width);
-                    }
 
                     span {
-                        color: var(--color-text-muted);
 
-                        &:last-child {
-                            color: var(--color-accent);
-                            font-family: var(--font-code);
-                            font-weight: 700;
+                        color: var(--color-accent);
+                        border: 1px solid var(--color-border);
+                        font-family: var(--font-code);
+                        font-weight: 700;
+                        font-size: 12px;
+                        padding: 6px 14px;
+                        border-radius: 10px;
+                        transition: .3s ease-in-out;
+
+                        &:hover {
+                            background-color: var(--color-accent);
+                            color: var(--color-bg);
+
                         }
+
                     }
                 }
-
-                // &.back-end {
-                //     >div {
-                //         &::after {
-                //             background-color: var(--color-surface);
-                //         }
-
-                //         span {
-
-
-                //             &:last-child {
-                //                 color: var(--ac);
-                //             }
-                //         }
-                //     }
-                // }
-            }
-        }
-
-        >p {
-            color: var(--color-text-muted);
-            letter-spacing: 2px;
-            padding-bottom: 10px;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-top: 40px;
-        }
-
-        >p+div {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            gap: 20px;
-
-            span {
-
-                color: var(--color-accent);
-                border: 1px solid var(--color-border);
-                padding: 6px 12px;
-                border-radius: 10px;
             }
         }
     }

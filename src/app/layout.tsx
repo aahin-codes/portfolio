@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {syne, dmMono, lora} from '@/app/fonts'
+import {syne, dmMono, lora, playfair_display} from '@/app/fonts'
 
 
 export const metadata: Metadata = {
@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${dmMono.variable} ${lora.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${syne.variable} ${dmMono.variable} ${lora.variable} ${playfair_display.variable}`}>
+      <body data-theme="light">{children}</body>
     </html>
   );
 }

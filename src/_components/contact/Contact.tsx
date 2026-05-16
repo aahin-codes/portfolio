@@ -56,7 +56,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <div className={Styles.contactContainer} ref={ref}>
             <div className={Styles.wrapper}>
-                <span className={Styles.underScore}>let's connect</span>
+                <span className={Styles.dot}>let's connect</span>
                 <h2>Start a conversation</h2>
                 <section>
                     <div className={Styles.wrapper}>
@@ -173,7 +173,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                                                 : <> send message <FaLongArrowAltRight /> </>
                                             }</button>
                                     </form>)}
-                                <p>// no spam <span>.</span> no cold sales <span>.</span> human responses only</p>
+                                <p>// no spam <span>&middot;</span> no cold sales <span>&middot;</span> human responses only</p>
                             </fieldset>
                         </div>
                     </div>
