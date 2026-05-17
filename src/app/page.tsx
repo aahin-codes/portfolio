@@ -9,6 +9,7 @@ import { useMemo, useRef } from "react";
 import Footer from "@/_components/footer/Footer";
 import Experience from "@/_components/experience/Experience";
 import { ThemeSide } from "@/_components/theme/Theme";
+import ThemeProvider from "@/_context/ThemeContext";
 
 export default function Home() {
 
@@ -32,17 +33,18 @@ export default function Home() {
   }), []);
 
   return (
-
-    <div>
-      {<Navbar sectionRefs={sectionRefs}/>}
-      {<Hero ref={heroRef} sectionRefs={sectionRefs}/>}
-       {<About ref={aboutRef} />}
-      {<Experience ref={experienceRef} />}
-      {<Skills ref={skillsRef} />}
-      {<Projects ref={projectsRef} />}
-      {<Contact ref={contactRef} />}
-      {<Footer sectionRefs={sectionRefs}/>}
-      {<ThemeSide />}
-    </div>
+    <ThemeProvider>
+      <div>
+        {<Navbar sectionRefs={sectionRefs} />}
+        {<Hero ref={heroRef} sectionRefs={sectionRefs} />}
+        {<About ref={aboutRef} />}
+        {<Experience ref={experienceRef} />}
+        {<Skills ref={skillsRef} />}
+        {<Projects ref={projectsRef} />}
+        {<Contact ref={contactRef} />}
+        {<Footer sectionRefs={sectionRefs} />}
+        {<ThemeSide />}
+      </div>
+    </ThemeProvider>
   );
 }

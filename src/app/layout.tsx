@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {syne, dmMono, lora, playfair_display} from '@/app/fonts'
 

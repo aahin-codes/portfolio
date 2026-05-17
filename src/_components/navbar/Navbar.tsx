@@ -1,6 +1,7 @@
 'use client'
 import Styles from '@/_components/navbar/Navbar.module.scss';
-import { useEffect, useState, forwardRef, RefObject } from 'react';
+import { ThemeContext } from '@/_context/ThemeContext';
+import { useEffect, useState, forwardRef, RefObject, useContext } from 'react';
 import { BsFillMoonStarsFill, BsMoon} from "react-icons/bs";
 
 
@@ -26,7 +27,7 @@ type NavLink = typeof NAV_LINKS[number];
 export const Navbar = ({ sectionRefs }: NavbarProps) => {
 
   const [activeLink, setActiveLink] = useState('home');
-  const [theme, setTheme] = useState('light');
+  const {theme, setTheme} = useContext(ThemeContext)!;
   
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -88,14 +89,12 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
         {theme === 'light' ? (
           <BsFillMoonStarsFill onClick={() => {
             setTheme('dark');
-            document.body.setAttribute('data-theme', 'dark');
           }} />
-        ) : (
+        ) : theme === 'dark' ? (
           <BsMoon onClick={() => {
             setTheme('light');
-            document.body.setAttribute('data-theme', 'light');
           }} />
-        )}
+        ):null}
         <button type='button'>resume</button>
       </div>
     </nav>
